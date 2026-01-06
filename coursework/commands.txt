@@ -27,3 +27,6 @@ trivy sbom sbom.json --format json --quiet -o trivy.json
 ===== DefectDojo =====
 cd ~/dojo
 docker compose up
+
+
+https://github.com/PKotik/TestPipeLine/actions/runs/20748960013/job/59573086096

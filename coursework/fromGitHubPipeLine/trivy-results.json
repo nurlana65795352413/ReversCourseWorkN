@@ -1,0 +1,321 @@
+{
+  "SchemaVersion": 2,
+  "ReportID": "019b9379-7c97-786c-a108-871fe773bd45",
+  "CreatedAt": "2026-01-06T13:22:51.15955289Z",
+  "ArtifactID": "sha256:0c6bc9439e394d2e17426f8eb178f361d352d416e212ae4456b87080c6439827",
+  "ArtifactName": ".",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://github.com/PKotik/TestPipeLine",
+    "Branch": "main",
+    "Commit": "f135e77fcfdbc402d1dc856d7f89d009af05e200",
+    "CommitMsg": "Try fix",
+    "Author": "Dim \u003cDim@DIMPC\u003e",
+    "Committer": "Dim \u003cDim@DIMPC\u003e"
+  },
+  "Results": [
+    {
+      "Target": "requirements.txt",
+      "Class": "lang-pkgs",
+      "Type": "pip",
+      "Packages": [
+        {
+          "Name": "cryptography",
+          "Identifier": {
+            "PURL": "pkg:pypi/cryptography@42.0.5",
+            "UID": "d45d0fd83226bbe5"
+          },
+          "Version": "42.0.5",
+          "Licenses": [
+            "Apache Software License",
+            "BSD License"
+          ],
+          "Locations": [
+            {
+              "StartLine": 7,
+              "EndLine": 7
+            }
+          ]
+        },
+        {
+          "Name": "flask",
+          "Identifier": {
+            "PURL": "pkg:pypi/flask@3.0.0",
+            "UID": "9e6306372c3f1d88"
+          },
+          "Version": "3.0.0",
+          "Licenses": [
+            "BSD License"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1,
+              "EndLine": 1
+            }
+          ]
+        },
+        {
+          "Name": "jinja2",
+          "Identifier": {
+            "PURL": "pkg:pypi/jinja2@3.1.2",
+            "UID": "3563c3b584964198"
+          },
+          "Version": "3.1.2",
+          "Locations": [
+            {
+              "StartLine": 6,
+              "EndLine": 6
+            }
+          ]
+        },
+        {
+          "Name": "pyyaml",
+          "Identifier": {
+            "PURL": "pkg:pypi/pyyaml@6.0.1",
+            "UID": "e8715bfb46a54e4a"
+          },
+          "Version": "6.0.1",
+          "Locations": [
+            {
+              "StartLine": 5,
+              "EndLine": 5
+            }
+          ]
+        },
+        {
+          "Name": "requests",
+          "Identifier": {
+            "PURL": "pkg:pypi/requests@2.31.0",
+            "UID": "8e703b5d58a2bfc6"
+          },
+          "Version": "2.31.0",
+          "Licenses": [
+            "Apache Software License"
+          ],
+          "Locations": [
+            {
+              "StartLine": 3,
+              "EndLine": 3
+            }
+          ]
+        },
+        {
+          "Name": "sqlalchemy",
+          "Identifier": {
+            "PURL": "pkg:pypi/sqlalchemy@2.0.23",
+            "UID": "2e06459f5c35e568"
+          },
+          "Version": "2.0.23",
+          "Locations": [
+            {
+              "StartLine": 8,
+              "EndLine": 8
+            }
+          ]
+        },
+        {
+          "Name": "urllib3",
+          "Identifier": {
+            "PURL": "pkg:pypi/urllib3@2.1.0",
+            "UID": "ef5251340a5c800e"
+          },
+          "Version": "2.1.0",
+          "Licenses": [
+            "MIT License"
+          ],
+          "Locations": [
+            {
+              "StartLine": 4,
+              "EndLine": 4
+            }
+          ]
+        },
+        {
+          "Name": "werkzeug",
+          "Identifier": {
+            "PURL": "pkg:pypi/werkzeug@3.0.1",
+            "UID": "8e43436a15262a5c"
+          },
+          "Version": "3.0.1",
+          "Licenses": [
+            "BSD License"
+          ],
+          "Locations": [
+            {
+              "StartLine": 2,
+              "EndLine": 2
+            }
+          ]
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2025-66418",
+          "PkgName": "urllib3",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/urllib3@2.1.0",
+            "UID": "ef5251340a5c800e"
+          },
+          "InstalledVersion": "2.1.0",
+          "FixedVersion": "2.6.0",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-66418",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:02c6f3625bad15d4831accaca8c56c8816d9d984872a09e3edb77625fe686486",
+          "Title": "urllib3: urllib3: Unbounded decompression chain leads to resource exhaustion",
+          "Description": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-770"
+          ],
+          "VendorSeverity": {
+            "amazon": 2,
+            "azure": 3,
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2025-66418",
+            "https://github.com/urllib3/urllib3",
+            "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
+            "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66418",
+            "https://ubuntu.com/security/notices/USN-7927-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-66418",
+            "https://www.openwall.com/lists/oss-security/2025/12/05/4"
+          ],
+          "PublishedDate": "2025-12-05T16:15:51.053Z",
+          "LastModifiedDate": "2025-12-10T16:08:32.193Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-66471",
+          "PkgName": "urllib3",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/urllib3@2.1.0",
+            "UID": "ef5251340a5c800e"
+          },
+          "InstalledVersion": "2.1.0",
+          "FixedVersion": "2.6.0",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-66471",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:2516177f8d248495fd58a6261920931c9c0a16debb9505ed125793d8452ddfac",
+          "Title": "urllib3 is a user-friendly HTTP client library for Python. Starting in ...",
+          "Description": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-409"
+          ],
+          "VendorSeverity": {
+            "amazon": 2,
+            "azure": 3,
+            "ghsa": 3,
+            "nvd": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/urllib3/urllib3",
+            "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+            "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66471",
+            "https://ubuntu.com/security/notices/USN-7927-1",
+            "https://www.cve.org/CVERecord?id=CVE-2025-66471",
+            "https://www.openwall.com/lists/oss-security/2025/12/05/4"
+          ],
+          "PublishedDate": "2025-12-05T17:16:04.4Z",
+          "LastModifiedDate": "2025-12-10T16:10:33.5Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-34069",
+          "PkgName": "werkzeug",
+          "PkgIdentifier": {
+            "PURL": "pkg:pypi/werkzeug@3.0.1",
+            "UID": "8e43436a15262a5c"
+          },
+          "InstalledVersion": "3.0.1",
+          "FixedVersion": "3.0.3",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-34069",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory pip",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Apip"
+          },
+          "Fingerprint": "sha256:7834c757574c5fe0e573bd43d2e9f4bac0c64b73befa32d4d56cc5d51e0177d0",
+          "Title": "python-werkzeug: user may execute code on a developer's machine",
+          "Description": "Werkzeug is a comprehensive WSGI web application library. The debugger in affected versions of Werkzeug can allow an attacker to execute code on a developer's machine under some circumstances. This requires the attacker to get the developer to interact with a domain and subdomain they control, and enter the debugger PIN, but if they are successful it allows access to the debugger even if it is only running on localhost. This also requires the attacker to guess a URL in the developer's application that will trigger the debugger. This vulnerability is fixed in 3.0.3.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-352"
+          ],
+          "VendorSeverity": {
+            "amazon": 3,
+            "azure": 3,
+            "cbl-mariner": 3,
+            "ghsa": 3,
+            "photon": 3,
+            "redhat": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-34069",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/commit/3386395b24c7371db11a5b8eaac0c91da5362692",
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-2g68-c3qc-8985",
+            "https://lists.debian.org/debian-lts-announce/2025/02/msg00026.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/H4SH32AM3CTPMAAEOIDAN7VU565LO4IR",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/H4SH32AM3CTPMAAEOIDAN7VU565LO4IR/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HFERFN7PINV4MOGMGA3DPIXJPDCYOEJZ",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HFERFN7PINV4MOGMGA3DPIXJPDCYOEJZ/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-34069",
+            "https://security.netapp.com/advisory/ntap-20240614-0004",
+            "https://security.netapp.com/advisory/ntap-20240614-0004/",
+            "https://ubuntu.com/security/notices/USN-6799-1",
+            "https://www.cve.org/CVERecord?id=CVE-2024-34069"
+          ],
+          "PublishedDate": "2024-05-06T15:15:23.99Z",
+          "LastModifiedDate": "2025-12-03T15:32:11.177Z"
+        }
+      ]
+    }
+  ]
+}
